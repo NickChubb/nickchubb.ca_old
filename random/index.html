@@ -1,0 +1,592 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Random Reddit Images</title>
+
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script>
+
+	$(window).unload(function() {
+
+		$('body').scrollTop(0);
+
+	});
+
+	
+
+	window.onload = function(){
+
+		if(getImagesCookie()!=''){
+
+			document.getElementById('input').value = getImagesCookie();
+
+		}else{
+
+			document.getElementById('input').value = '50';
+
+		}
+
+	}
+
+	window.onscroll = function(ev) {
+		if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+			morePictures();
+		}
+	};
+
+	String.prototype.shuffleSlice = function () {
+
+		var a = this.split(""),
+
+			n = a.length;
+
+
+
+		for(var i = n - 1; i > 0; i--) {
+
+			var j = Math.floor(Math.random() * (i + 1));
+
+			var tmp = a[i];
+
+			a[i] = a[j];
+
+			a[j] = tmp;
+
+		}
+
+		return a.join("").slice(0,5);
+
+	}
+
+
+
+	function morePictures(){
+
+		var imageCount;
+
+		if(getImagesCookie()==''){
+
+			imageCount = 50;
+
+		}else{
+
+			imageCount = getImagesCookie();
+
+		}
+
+		for(var i=0;i<imageCount;i++){
+
+			var picture = str.shuffleSlice();
+
+			var picturelink = "http://i.imgur.com/" + picture + ".jpg";
+
+			
+
+			document.getElementById('container').innerHTML += '<img onclick="ShowFullPageImage(this);" onload="if(this.width==\'161\'&&this.height==\'81\'){ this.parentNode.removeChild(this) };" id="'+picture+'" src="http://i.imgur.com/' + picture + '.jpg" title="'+(timesRan+1)+'.'+(i+1)+' : '+picture+'" class="thumbnail-image">';
+
+			/*
+
+			var img = new Image();
+
+			img.onload = function() {
+
+				if(this.width=="161"&&this.height=="81"){
+
+					//Redeclares source of the image if it is 161*81
+
+					img.src = "http://i.imgur.com/"+str.shuffleSlice()+".jpg";
+
+				}else{
+
+					document.getElementById('container').innerHTML += '<img onclick="ShowFullPageImage(this);" id="'+img.src+'" src="'+img.src+'" title="'+(timesRan+1)+'.'+(i+1)+' : '+img.src+'" style="max-width: 500px; max-height: 500px; margin: 3px;"">';
+
+				}
+
+			
+
+			img.src = "http://i.imgur.com/"+str.shuffleSlice()+".jpg";
+
+			*/
+
+		};
+
+		timesRan++;
+
+	};
+
+	
+
+	function ShowFullPageImage(picture){
+
+		document.getElementById('big-image').style.display = '-webkit-box';
+
+		document.getElementById('big-picture-container').innerHTML = '<img id="big-picture" onclick="HideFullPageImage();" src="'+picture.src+'"></img><a id="big-picture-link" target="_blank" href="'+picture.src+'"><i class="fa fa-link"></i></a>';
+
+	};
+
+
+
+	function HideFullPageImage(){
+
+		document.getElementById('big-image').style.display = 'none';
+
+		document.getElementById('big-picture-container').innerHTML = '';
+
+	};
+
+	
+
+	function OpenAbout(){
+
+		document.getElementById('about').style.display = '-webkit-box';
+
+	};
+
+	
+
+	function CloseAbout(){
+
+		document.getElementById('about').style.display = 'none';
+
+	};
+
+	
+
+	function getImagesCookie() {
+
+		if(document.cookie!=""){
+
+			var images = document.cookie.substring(7);
+
+			return images;
+
+		}
+
+		return "";
+
+	}
+
+	
+
+	$(function() {
+
+		$(document).on('click', function(e) {
+
+			if (e.target.id == 'settings-button' || e.target.id == 'input') {
+
+			}else{
+
+				document.getElementById('settings-popup').style.top = '-15px'
+
+				document.getElementById('settings-button').style.background = '';
+
+				document.getElementById('settings-button').style.boxShadow = '';
+
+			}
+
+		})
+
+	})
+
+	
+
+	
+
+	var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+
+	var timesRan = 0;
+
+
+
+	</script>
+
+	<style>
+
+	.thumbnail-image{
+
+		max-width: 400px; 
+
+		max-height: 400px; 
+
+		margin: 3px;
+
+	}
+
+	#big-image{
+
+		position: fixed; 
+
+		width: 100%; 
+
+		height: 100%; 
+
+		top: 0px; 
+
+		right: 0px;
+
+		bottom: 0px; 
+
+		left: 0px; 
+
+		background-color: rgba(18,18,17,0.8); 
+
+		display: none;
+
+		-webkit-box-align: center;
+
+		-webkit-box-pack: center;
+
+		z-index: 1000;
+
+	}
+
+	#big-picture-container{
+
+		padding: 10px;
+
+		border-radius: 2px;
+
+		background: #444442;
+
+		text-align: center;
+
+		box-shadow: 1px 1px 5px #050505;
+
+	}
+
+	#big-picture{
+
+		/* border: 10px solid #444442; */
+
+		/* border-radius: 2px; */
+
+		max-height: 95vh; 
+
+		max-width: 95vw;
+
+	}
+
+	#big-picture-link{
+
+		position: absolute;
+
+		bottom: 0px;
+
+		right: 0px;
+
+		padding: 5px;
+
+		padding-top:6px;
+
+		padding-left:6px;
+
+		background: #444442;
+
+	}
+
+	#about{
+
+		position: fixed; 
+
+		width: 100%; 
+
+		height: 100%; 
+
+		top: 0px; 
+
+		right: 0px;
+
+		bottom: 0px; 
+
+		left: 0px; 
+
+		background-color: rgba(18,18,17,0.8); 
+
+		display: none;
+
+		-webkit-box-align: center;
+
+		-webkit-box-pack: center;
+
+		z-index: 1000;
+
+	}
+
+	#about-text-container{
+
+		padding: 10px;
+
+		border-radius: 2px;
+
+		background: #444442;
+
+		text-align: center;
+
+		text-decoration: none;
+
+		font-family: Arial,sans-serif;
+
+		font-size: 15px;
+
+		font-weight: 400;
+
+		line-height: 18px;
+
+		color: #ddddd1;
+
+		box-shadow: 1px 1px 5px #050505;
+
+	}
+
+	#top-bar{
+
+		position: fixed;
+
+		top:0px;
+
+		left:0px;
+
+		background: #2b2b2b;
+
+		width: 100%;
+
+		/* height: 36px; */
+
+		z-index: 100;
+
+		display:-webkit-box;
+
+		-webkit-box-align: horizontal;
+
+		box-shadow: 0px 2px 5px #050505;
+
+		border-bottom: 2px solid #1F1F1F;
+
+	}
+
+	#top-bar div{
+
+		color: #fff;
+
+		padding: 10px;
+
+		padding-top: 9px;
+
+		padding-bottom: 10px;
+
+		text-decoration: none;
+
+		font-family: Arial,sans-serif;
+
+		font-size: 15px;
+
+		font-weight: 700;
+
+		line-height: 18px;
+
+		cursor: default;
+
+	}
+
+	#top-bar div:hover{
+
+		background: #444442;
+
+	}
+
+	#top-bar div:active{
+
+		background: #1F1F1F;
+
+		box-shadow: 1px 0px 1px #121212 inset;
+
+	}
+
+	#container{
+
+		position: absolute;
+
+		top: 42px;
+
+	}
+
+	#settings-button{
+
+		position: fixed;
+
+		right: 10px;
+
+		padding: 10px;
+
+		padding-top: 8px;
+
+		padding-bottom: 9px;
+
+		font-size: 20px;
+
+		color: #fff;
+
+	}
+
+	#settings-button:hover{
+
+		background: #444442;
+
+	}
+
+	#settings-button:active{
+
+		/* background: #1F1F1F; */
+
+		/* box-shadow: 1px 0px 1px #121212 inset; */
+
+	}
+
+	#settings-popup{
+
+		position: fixed;
+
+		top: -15px;
+
+		right: 5px;
+
+		height: 50px;
+
+		width: 200px;
+
+		background: #2b2b2b;
+
+		border: 1px solid #1f1f1f;
+
+		box-shadow: 1px 1px 3px #050505;
+
+		border-bottom-right-radius: 2px;
+
+		border-bottom-left-radius: 2px;
+
+		z-index: 10;
+
+		-webkit-transition: .3s;
+
+		text-decoration: none;
+
+		font-family: Arial,sans-serif;
+
+		color: #fff;
+
+		display:-webkit-box;
+
+		-webkit-box-pack: center;
+
+	}
+
+	#image-loader-input{
+
+		margin-top: 10px;
+
+	}
+
+	#moreButton{
+
+		background: rgb(18, 18, 17);
+
+		-webkit-transition: background .3s;
+
+		cursor: default;
+
+		color: #fff;
+
+		text-decoration: none;
+
+		font-family: Arial,sans-serif;
+
+		font-size: 15px;
+
+		font-weight: 700;
+
+		line-height: 18px;
+
+	}
+
+	#moreButton:hover{
+
+		background: #20201E;
+
+		-webkit-transition: background 0s;
+
+	}
+
+	#moreButton:active{
+
+		background-color: rgba(0, 0, 0, 0.5);
+
+		box-shadow: 1px 1px 1px #050505 inset;
+
+	}
+
+	</style>
+
+</head>
+
+<body onload='morePictures();' style="background: #121211">
+
+	<div id="big-image" onclick="HideFullPageImage();">
+
+		<div id="big-picture-container"></div>
+
+	</div>
+
+	<div id="about" onclick="CloseAbout();">
+
+		<div id="about-text-container">
+
+			<div>Made by Nick and Stephen<br>All property is copyright of its respective owners<br>Please don't sue me</div>
+
+		</div>
+
+	</div>
+
+	<div id="top-bar">
+
+		<!--<a href="http://imgur.com" style="margin-left: 10px; margin-right: 20px;"><img src="http://s.imgur.com/images/imgurlogo-header.png?1"></img></a>-->
+
+		<div id="more-button" onclick='morePictures();' title="duh">more</div>
+
+		<div id="refresh-button"  onclick="location.reload();" title="or you could just press F5, y'know">reload</div>
+
+		<div id="about-button" onclick="OpenAbout();" title="please">about</div>
+
+		<i id="settings-button" class="fa fa-cog" onclick="if(document.getElementById('settings-popup').style.top == '-15px'){document.getElementById('settings-popup').style.top = '39px'}else{document.getElementById('settings-popup').style.top = '-15px'}; 
+
+			if(this.style.background == 'rgb(31, 31, 31)'){this.style.background = ''; this.style.boxShadow = '';}else{this.style.background = '#1F1F1F'; this.style.boxShadow = '1px 0px 1px #121212 inset';};"></i>
+
+	</div>
+
+	<div id="settings-popup" style="top: -15px;">
+
+		<div id="image-loader-input">
+
+			images to load: 
+
+			<input id="input" type="text" value="50" size="4" onchange="document.cookie='images='+this.value;" onkeyup="this.onchange();"></input>
+
+		</div>
+
+	</div>
+
+	<div id="container" style=""></div>
+
+	<div>
+
+		<div id="moreButton" style="padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; text-align: center; bottom: 0px; right: 0px; position: fixed;" onclick='morePictures();'><a>more</a></div>
+
+	</div>
+
+</body>
+
+</html>
