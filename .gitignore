@@ -1,6 +1,6 @@
 #ignore redditrandom (it's already in my github)
-random
+random/
 
 #ignore other stuff
 .DS_Store
-eventcalendar
+eventcalendar/
