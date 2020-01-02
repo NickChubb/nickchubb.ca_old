@@ -73,6 +73,8 @@
 }
 #display_picture_box{
   padding: 20px;
+  padding-top: 30px;
+  padding-left: 40px;
   font-size: 18;
   display: flex;
   flex-direction: column;
@@ -111,7 +113,7 @@
 
 /* Article Styling */
 article{
-  padding: 5px;
+  padding: 10px;
 }
 article h1{
   font-size: 26;

@@ -3,7 +3,7 @@ function hideAbout(){
     $('#about').slideDown('slow');
     //$('#about').css("display", "flex");
     $('#about-button').css("background-color", "#E8E8E8");
-    $('#about-button').css("box-shadow", "1px 1px 3px  #ADADAD inset, 0px 1px 3px #E8E8E8").css("padding-bottom", "2px").css("color", "green");
+    $('#about-button').css("box-shadow", "1px 1px 3px  #ADADAD inset, 0px 5px 0px #E8E8E8").css("padding-bottom", "2px").css("color", "green");
   }else{
     $('#about').slideUp('slow');
     $('#about-button').css("background-color", "white");
