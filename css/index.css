@@ -61,7 +61,7 @@
   font-size: 14;
   width:100%;
   background: #E8E8E8;
-  background: url('http://i.imgur.com/XwqVXjQ.png'), rgb(230,230,230);
+  background: url(../images/grainy_background.png), rgb(230,230,230);
   box-shadow: 1px 1px 3px #ADADAD inset;
   /*margin-top: 5px;*/
 }
