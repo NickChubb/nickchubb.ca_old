@@ -54,7 +54,7 @@
 #about_button{
   position: relative;
   padding-bottom: 30px;
-  /*box-shadow: 0px -1px 0px #ADADAD inset, 0px 1px 0px #ADADAD inset;*/
+  /*box-shadow: 0px -1px 0px #ADADAD inset, 0px 1px 0px #ADADAD inset;*/  
 }
 #about{
   display: flex;
