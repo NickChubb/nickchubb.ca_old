@@ -1,63 +1,217 @@
-<html>
-<head>
-	<title>Nick Chubb</title>
+<html lang="en">
 
-	<!-- css -->
+<head>
+
+	<title>Nick Chubb</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Nick Chubb">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- browser icon
 	<link rel="icon" href="images/icon.png">
+-->
+
+	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- my CSS -->
 	<link rel="stylesheet" href="css/index.css?">
 
-	<!-- javacript -->
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+
+<body>
+
+
+	<div class="container-fluid h-100">
+
+		<div class="row h-100">
+
+			<div class="col-lg-3" id="sidebar">
+
+				<div id="display_picture_box">
+
+
+					<div id="my_name"><a>N</a><a>i</a><a>c</a><a>k</a> <a>C</a><a>h</a><a>u</a><a>b</a><a>b</a></div>
+
+					<img id="display_image" src="images/me.jpg" alt="Me." width="300px" height="300px">
+
+					<div id="icon_container">
+
+
+						<button onclick="window.open('https://github.com/NickChubb');"><i class="fab fa-github"></i></button>
+						<button onclick="window.open('https://www.linkedin.com/in/nickrchubb');"><i class="fab fa-linkedin"></i></button>
+						<!--<button onclick="window.open('https://www.instagram.com/nick.r.chubb/');"><i class="fab fa-instagram"></i></button>-->
+						<button onclick="window.open('mailto:nick.r.chubb@gmail.com');"><i class="far fa-envelope"></i></button>
+						<button onclick="window.open('resume/draft.pdf');"><i class="fas fa-file-alt"></i></button>
+
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="col-lg w-100" id="main_section">
+
+				<div class="row justify-content-end" id="tabs">
+
+					<ul class="nav">
+
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#bio">bio.</a></li>
+						<li class="nav-item"><a class="nav-item nav-link" data-toggle="tab" href="#projects">projects.</a></li>
+						<li class="nav-item"><a class="nav-item nav-link" data-toggle="tab" href="#experience">experience.</a></li>
+
+					</ul>
+
+				</div>
+				<div id="content" class="tab-content">
+					<div id="bio" class="container tab-pane active show fade">
+
+
+						<!-- BIOGRAPHY -->
+
+
+						<h1>Biography.</h1>
+						<br>
+						<p>Hi, I am a student who is currently completing his degree in Computer Science and Molecular Biology & Biochemistry at Simon Fraser University.</p>
+						<p>I consider myself someone who has always had a deep interest in computers and programming.  Inititally self taught through YouTube videos in grade 9.</p>
+						<p>Since I have began my studies at SFU, I've grown a deep passion for molecular biology and find it immensly interesting the parallels that exist between natural biological systems
+						and artificial systems.  I believe that my unique perspective I have gained from my study of natural systems is invaluable to any team.</p>
+						<p>Travel has always been a dream and a passion of mine.  At age 19, I flew to Europe solo and backpacked through more than 15 countries over the next 3 months.</p>
+
+						<br>
+						<hr>
+						<br>
+						<!-- SKILLS -->
+
+
+						<div class="row">
+							<div class="col-sm-4">
+
+								<strong>Programming Languages</strong>
+
+								<ul>
+									<li>Java</li>
+									<li>Python</li>
+									<li>C/C++</li>
+									<li>HTML5</li>
+									<li>CSS</li>
+									<li>JavaScript</li>
+								</ul>
+
+							</div>
+
+							<div class="col-sm-4">
+								<strong>Frameworks</strong>
+
+								<ul>
+									<li>Node.js</li>
+									<li>Android SDK</li>
+									<li>Bootstrap 4</li>
+									<li>jQuery</li>
+									<li>Standard Library</li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+
+								<strong>Software</strong>
+								<ul>
+									<li>Git</li>
+									<li>Linux</li>
+									<li>Postman</li>
+									<li>Bash</li>
+									<li>Microsoft Excel</li>
+									<li>MATLAB</li>
+								</ul>
+							</div>
+						</div>
+
+						<br>
+
+						<div class="row">
+							<div class="col-sm-4">
+
+								<strong>Relevant Coursework</strong>
+
+								<ul>
+									<li>Introduction to Software Engingeering (In Progress)</li>
+									<li>Biomedical Computing (In Progress)</li>
+									<li>Data Structures and Prorgramming (2019)</li>
+									<li>Intro to Computing Science II (2018)</li>
+									<li>Intro to Computing Science I (2017)</li>
+								</ul>
+
+							</div>
+
+							<div class="col-sm-4">
+								<strong>Technical Skills</strong>
+
+								<ul>
+									<li>Agile Development</li>
+									<li>Unit Testing</li>
+									<li>Quality Assurance</li>
+									<li>UI Design</li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+
+								<strong>IDEs</strong>
+								<ul>
+									<li>IntelliJ</li>
+									<li>Android Studio</li>
+									<li>PyCharm</li>
+									<li>Visual Studio Code</li>
+									<li>Atom</li>
+								</ul>
+							</div>
+						</div>
+
+
+					</div>
+
+					<div id="projects" class="container tab-pane fade">
+
+						<h1>Projects.</h1>
+						<br>
+
+						<i>Work in progress.</i>
+
+					</div>
+
+					<div id="experience" class="container tab-pane fade">
+
+						<h1>Experience.</h1>
+						<br>
+
+						<i>Work in progress.</i>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<!-- popper -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<!-- bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<!-- My javascript -->
 	<script src="js/index.js?"></script>
 
-</head>
-<body>
-	<div id="all_stuff">
-		<div id="inner_container">
-			<div id="my_name"><a>N</a><a>i</a><a>c</a><a>k</a> <a>C</a><a>h</a><a>u</a><a>b</a><a>b</a><a>.</a></div>
-			<div id="icon_container">
-				<a href="javascript:hideAbout();" id="about_button" title="About Me."><i class="far fa-address-card"></i></a>
-				<!--<a href=""><i class="fas fa-user-circle"></i></a>-->
-				<!--<a href="https://www.linkedin.com/in/nickrchubb"><i class="fab fa-linkedin"></i></a>-->
-				<a href="https://github.com/NickChubb" title="GitHub."><i class="fab fa-github"></i></a>
-				<a href="https://www.linkedin.com/in/nickrchubb" title="LinkedIn."><i class="fab fa-linkedin"></i></a>
-				<a href="https://www.instagram.com/nick.r.chubb/" title="Instagram."><i class="fab fa-instagram"></i></a>
-				<a href="mailto:nick.r.chubb@gmail.com" title="Mail."><i class="far fa-envelope"></i></a>
-			</div>
-			<div id="about" class="flex-container" style="display: none;">
-				<div id="display_picture_box">
-					<img id="display_image"src="images/me.jpg" alt="Me." width="300px" height="300px">
-					<div id="resume_div"><a href="resume/draft.pdf" id="resume_link"><i class="fas fa-file-alt"></i> Resume.</a></div>
-				</div>
-				<div id="bio_section">
-					<article>
-					<!-- BIOGRAPHY -->
-
-					<h1>Biography.</h1>
-
-					<p>Hi, I am a student who is currently completing his degree in Computer Science and Molecular Biology & Biochemistry at Simon Fraser University.</p>
-					<p>I consider myself someone who has always had a deep interest in computers and programming.  Inititally self taught through YouTube videos in grade 9.</p>
-					<p>Since I have began my studies at SFU, I've grown a deep passion for molecular biology and find it immensly interesting the parallels that exist between natural biological systems
-					and artificial systems.  I believe that my unique perspective I have gained from my study of natural systems is invaluable to any team.</p>
-					<p>Travel has always been a dream and a passion of mine.  At age 19, I flew to Europe solo and backpacked through more than 15 countries over the next 3 months.</p>
-					<hr>
-
-					<!-- PERSONAL PROJECTS -->
-
-					<h1>Personal Projects.</h1>
-
-					<!-- PROJECT -->
-					<h2><i>Site still under construction.</i></h2>
-					<p></p>
-					<!------------->
-
-
-					<!-- MORE -->
-				</article>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
+
 </html>
