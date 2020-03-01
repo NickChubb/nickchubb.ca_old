@@ -1,14 +1,13 @@
 
 
 body{
-  background: url('../images/grainy_background.png'), rgb(50,50,50);
+  background: url('../src/grainy_background.png'), rgb(50,50,50);
 }
 
 /*      Column 1       */
 
 #sidebar{
   background: inherit;
-
 }
 
 #display_picture_box{
