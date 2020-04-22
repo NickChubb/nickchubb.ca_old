@@ -1,5 +1,5 @@
 # <a href="http://nchubb.com">nchubb.com</a> source code
 
-This is the source code for my portfolio website.  It is always evolving and the code on github may not reflect the exact current website online.
+This is the source code for my portfolio website.
 
-Uses <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://jquery.com/">jQuery</a>.
+Uses <a href="https://getbootstrap.com/">Bootstrap</a> and is hosted with NodeJS on the backend.
