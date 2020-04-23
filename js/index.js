@@ -5,3 +5,14 @@ $(document).ready(function() {
   }); 
 });
 
+function caretToggle(div){
+
+  if($(".caret").hasClass("fa-rotate-90") ){
+
+    $(".caret").removeClass("fa-rotate-90");
+
+  }
+
+  $(div).children("i").toggleClass("fa-rotate-90");
+  
+}
