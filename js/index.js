@@ -1,18 +1,17 @@
-$(document).ready(function() {
-  $('#resume_button').click(function(){
-      $("#dialog").dialog();
-      $("#frame").attr("src", "src/resume.pdf");
-  }); 
-});
-
+/**
+ * Toggles the caret icons in my class list dropdowns
+ * @param {*} div - Div clicked on
+ */
 function caretToggle(div){
 
-  if($(".caret").hasClass("fa-rotate-90") ){
-
+  if($(div).children("i").hasClass("fa-rotate-90")){
+    
     $(".caret").removeClass("fa-rotate-90");
 
-  }
+  }else{
 
-  $(div).children("i").toggleClass("fa-rotate-90");
-  
+    $(".caret").removeClass("fa-rotate-90");
+    $(div).children("i").addClass("fa-rotate-90");
+
+  }
 }

@@ -1,5 +1,3 @@
-
-
 body{
   background: url('../src/grainy_background.png'), rgb(50,50,50);
 }
@@ -23,8 +21,6 @@ body{
 }
 
 #my_name{
-
-
 
   margin-top:      10px;
   margin-bottom:    5px;
@@ -119,86 +115,22 @@ body{
   cursor: pointer;
 }
 
+.date {
+  color: gray;
+}
 
-/*
+.list-group-item {
+  padding: 5px;
+  padding-left: 15px;
+}
 
-#icon_container{
-  cursor: default;
+.list-title {
+  font-weight: bold;
+  background-color: rgba(0,0,0,.03);
 }
-#icon_container a{
-  padding:5px;
-  padding-top:3px;
-  margin-left: -4px;
-  margin-right: -4px;
-}
-#icon_container a:link{
-  text-decoration: none;
-  color:black;
-}
-#icon_container a:visited{
-  text-decoration: none;
-  color:black;
-}
-#icon_container a:hover{
-  text-decoration: none;
-  color:gray;
-  transition: color .1s ease-in;
-}
-#icon_container a:active{
-  text-decoration: none;
-  color:green;
-}
-#about_button{
-  padding-bottom: 30px;
-}
-#about{
-  display: flex;
-  font-size: 14;
-  width:100%;
-  background: #E8E8E8;
-  background: url(../images/grainy_background.png), rgb(230,230,230);
-  box-shadow: 1px 1px 3px #ADADAD inset;
-}
-#display_picture_box{
-  padding: 20px;
-  padding-top: 30px;
-  padding-left: 40px;
-  font-size: 18;
-}
-#display_image{
-  border-radius: 50%;
-  border: 4px solid rgb(50,50,50);
-  box-shadow: 1px 1px 2px rgba(150, 150, 150);
-}
-#bio_section{
-  padding: 20px;
-  flex-grow: 1;
-  font-size: 22;
-}
-#my_name a:hover{
-  color: green;
-}
-#resume_link{
-  text-decoration: none;
-  color: black;
-  padding: 8px;
-  background: lightgrey;
-  border-radius: 4px;
-  border: 1px solid #ADADAD;
-}
-#resume_link:hover{
-  color: green;
-}
-#resume_link:active{
-  background: #C8C8C8;
-  box-shadow: 1px 1px 2px #AEAEAE inset;
-}
-#resume_div{
-  margin-top: 25px;
-}
-*/
 
 /* Article Styling */
+
 article{
   padding: 10px;
 }
@@ -207,4 +139,7 @@ article h1{
 }
 article h2{
   font-size: 24;
+}
+p {
+  font-size: 18;
 }
