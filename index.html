@@ -92,7 +92,7 @@
 
 
 						<div class="row">
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 
 								<strong>Programming Languages</strong>
 
@@ -106,50 +106,29 @@
 
 							</div>
 
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 								<strong>Frameworks</strong>
 
 								<ul>
 									<li>Android SDK</li>
 									<li>Bootstrap 4</li>
-									<li>jQuery</li>
-									<li>Standard Library</li>
-									<li><i>(learning) </i>Node.js</li>
-									<li><i>(learning) </i>Nginx</li>
+									<li>Vue.js</li>
+									<li>Node.js</li>
+									<li>Nginx</li>
 								</ul>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 
 								<strong>Software</strong>
 								<ul>
 									<li>Git</li>
 									<li>Linux</li>
+									<li>AWS</li>
 									<li>Postman</li>
 									<li>Bash</li>
-									<li>Microsoft Excel</li>
-									<li>MATLAB</li>
 								</ul>
 							</div>
-						</div>
-
-						<br>
-
-						<div class="row">
-							<div class="col-sm-4">
-
-								<strong>Relevant Coursework</strong>
-
-								<ul>
-									<li>Introduction to Software Engingeering (In Progress)</li>
-									<li>Biomedical Computing (In Progress)</li>
-									<li>Data Structures and Prorgramming (2019)</li>
-									<li>Intro to Computing Science II (2018)</li>
-									<li>Intro to Computing Science I (2017)</li>
-								</ul>
-
-							</div>
-
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 								<strong>Technical Skills</strong>
 
 								<ul>
@@ -159,16 +138,54 @@
 									<li>UI Design</li>
 								</ul>
 							</div>
-							<div class="col-sm-4">
+						</div>
 
-								<strong>IDEs</strong>
-								<ul>
-									<li>Visual Studio Code</li>
-									<li>Android Studio</li>
-									<li>IntelliJ</li>
-									<li>PyCharm</li>
-									<li>Atom</li>
+						<br>
+
+						<div class="row">
+							<div class="col">
+
+								<strong>Relevant Coursework</strong>
+
+
+								<ul id="courses-list">
+
+									<li>
+										<div class="card">
+											<div class="card-body pointer" data-toggle="collapse" href="#class-4" onclick='$(this).children("i").toggleClass("fa-rotate-90")'>
+												<i class="fas fa-angle-right"></i> Artificial Intelligence Survey (In Progress)
+											</div>
+											<div class="card-footer collapse" id="class-4">In this class..</div>
+										</div>
+									</li>
+
+									<li class="course card" data-toggle="collapse" href="#class-1" onclick='$(this).children("i").toggleClass("fa-rotate-90")'> 
+										<i class="fas fa-angle-right"></i> <span class="pointer">Artificial Intelligence Survey (In Progress)</span>
+										<ul class="collapse" id="class-1">
+											<li>In this class I</li>
+										</ul>
+									</li>
+
+									<li class="course" data-toggle="collapse" href="#class-2" onclick='$(this).children("i").toggleClass("fa-rotate-90")'> 
+										<i class="fas fa-angle-right"></i> <span class="pointer">Database Systems I (In Progress)</span>
+										<ul class="course-info collapse" id="class-2">
+											<li>In this class I</li>
+										</ul>
+									</li>
+
+									<li class="course" data-toggle="collapse" href="#class-3" onclick='$(this).children("i").toggleClass("fa-rotate-90")'> 
+										<i class="fas fa-angle-right"></i> <span class="pointer">Introduction to Software Engingeering (2020)</span>
+										<ul class="collapse" id="class-3">
+											<li>In this class I</li>
+										</ul>
+									</li>
+
+									<li>Biomedical Computing (2020)</li>
+									<li>Data Structures and Prorgramming (2019)</li>
+									<li>Intro to Computing Science II (2018)</li>
+									<li>Intro to Computing Science I (2017)</li>
 								</ul>
+
 							</div>
 						</div>
 
@@ -178,15 +195,29 @@
 					<div id="projects" class="container tab-pane fade">
 
 						<h1>Projects.</h1>
+						<hr>
 						<br>
 
-						<i>Work in progress.</i>
+						<h3>EatSafe Surrey <i><span class="text-divider">/</span></i> <a href=""><i class="fab fa-github"></i></a></h3>
+						<p>
+						An android app that allow users to see the latest health inspections at any restaurant in Surrey, BC.
+						</p>
+						<ul>
+							<li>As a member of my team, my roles included implemening the ability to favourite restaurants, </li>
+						</ul>
+						
+						<p>Created for my Introduction to Software Engineering course.</p>
+
+						<br>
+
+						<h3>Covid Calculator Canada <i><span class="text-divider">/</span></i> <a href="http://covidcalculatorcanada.tech"><i class="fas fa-link"></i></a> <a href="https://github.com/SinaKhalili/biomedical-computing-project"><i class="fab fa-github"></i></a></h3>
 
 					</div>
 
 					<div id="experience" class="container tab-pane fade">
 
 						<h1>Experience.</h1>
+						<hr>
 						<br>
 
 						<i>Work in progress.</i>

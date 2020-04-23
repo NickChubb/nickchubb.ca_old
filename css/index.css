@@ -96,14 +96,28 @@ body{
 
 #main_section{
   background: white;
-
   padding-top: 20px;
 }
 
+#courses-list {
+  list-style: none;
+}
 
+.text-divider {
+  color: #E8E8E8;
+}
 
+.class-info {
+  list-style: none;
+}
 
+.course {
+  margin-left: -1.3em;
+}
 
+.pointer {
+  cursor: pointer;
+}
 
 
 /*
