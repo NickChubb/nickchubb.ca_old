@@ -129,6 +129,25 @@ body{
   background-color: rgba(0,0,0,.03);
 }
 
+.project-icon {
+  font-size: 24;
+}
+
+.project-img {
+  width: 18rem;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.project-card{
+  margin-bottom: 30px;
+}
+
+.project-footer {
+  
+}
+
 /* Article Styling */
 
 article{

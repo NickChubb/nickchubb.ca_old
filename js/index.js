@@ -6,7 +6,7 @@ function caretToggle(div){
 
   if($(div).children("i").hasClass("fa-rotate-90")){
     
-    $(".caret").removeClass("fa-rotate-90");
+    $(".caret").addClass("fa-rotate-90");
 
   }else{
 
