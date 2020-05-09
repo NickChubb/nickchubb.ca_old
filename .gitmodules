@@ -1,0 +1,3 @@
+[submodule "redditrandom"]
+	path = redditrandom
+	url = git@github.com:nickchubb/redditrandom
