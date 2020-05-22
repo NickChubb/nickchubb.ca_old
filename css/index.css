@@ -102,6 +102,10 @@ p {
   list-style: none;
 }
 
+.skill-group{
+  margin-top: 20px;
+}
+
 .text-divider {
   color: #E8E8E8;
 }
@@ -119,7 +123,7 @@ p {
 }
 
 .date {
-  color: gray;
+  color:rgba(0,0,0,.45);
 }
 
 .list-group-item {
@@ -144,7 +148,11 @@ p {
 }
 
 .project-card{
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.project-footer{
+  padding-top: 50px;
 }
 
 /* Makes the side picture box sticky on desktop only */
