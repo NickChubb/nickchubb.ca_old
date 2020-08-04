@@ -7,7 +7,13 @@
 	<meta name="author" content="Nick Chubb">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" href="src/icon.png?">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -64,6 +70,7 @@
 						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#bio">bio.</a></li>
 						<li class="nav-item"><a class="nav-item nav-link" data-toggle="tab" href="#projects">projects.</a></li>
 						<li class="nav-item"><a class="nav-item nav-link" data-toggle="tab" href="#experience">experience.</a></li>
+						<li class="nav-item"><a class="nav-item nav-link" href="/blog/">blog.</a></li>
 
 					</ul>
 
@@ -77,21 +84,22 @@
 
 						<h1>Biography.</h1>
 						<br>
-						<p>Hi, I am a student who is currently completing his degree in Computer Science and Molecular Biology & Biochemistry at Simon Fraser University.</p>
-						<p>I consider myself someone who has always had a deep interest in computers and programming, I have been learning to code since 9th grade.</p>
-						<p>Since I have began my studies at SFU, I've grown a deep passion for molecular biology and find it immensly interesting the parallels that exist between natural biological systems
-						and artificial systems.  I believe that my unique perspective I have gained from my study of natural systems is invaluable to any team.</p>
-						<p>Travel has always been a dream and a passion of mine.  At age 19, I flew to Europe solo and backpacked through more than 15 countries over the next 3 months.</p>
+						<p>Hi, I am a Computer Science & Molecular Biology student and aspiring Full-Stack Developer.</p>
+						<p>Computer Science has always been a passion of mine and from a young age I have been teaching myself how to code.</p>
+						<p>Over the last 3 years I have invested hundreds of hours into student engagement around my school.  Throughout this time I have held 
+							multiple roles across several different student unions, including President of the Science Undergraduate Society and Applied Science
+							Representative for the Simon Fraser Student Society.</p>
+						<p>At age 19, I flew to Europe solo and backpacked through more than 15 countries over the next 3 months.	
+						</p>
 
 						<br>
-						<hr>
-						<br>
+						<hr>	
 
 						<!-- SKILLS -->
 
 						<div class="row">
 
-							<div class="col-sm-3">
+							<div class="col-sm-3 skill-group">
 
 								<ul class="list-group">
 									<li class="list-group-item list-title">Programming Languages</li>
@@ -104,7 +112,7 @@
 
 							</div>
 
-							<div class="col-sm-3">
+							<div class="col-sm-3 skill-group">
 
 								<ul class="list-group">
 									<li class="list-group-item list-title">Frameworks</li>
@@ -116,24 +124,25 @@
 								</ul>
 
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-3 skill-group">
 
 								<ul class="list-group">
 									<li class="list-group-item list-title">Software</li>
 									<li class="list-group-item">Git</li>
 									<li class="list-group-item">Linux</li>
+									<li class="list-group-item">Microsoft SQL Server</li>
 									<li class="list-group-item">AWS</li>
 									<li class="list-group-item">Bash/Zsh</li>
 								</ul>
 
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-3 skill-group">
 
 								<ul class="list-group">
 									<li class="list-group-item list-title">Technical Skills</li>
 									<li class="list-group-item">Agile Development</li>
+									<li class="list-group-item">Database Management</li>
 									<li class="list-group-item">Unit Testing</li>
-									<li class="list-group-item">Quality Assurance</li>
 									<li class="list-group-item">UI/UX Design</li>
 									<li class="list-group-item">Project Management</li>
 								</ul>
@@ -159,11 +168,15 @@
 								</h3>
 							</div>
 							<div class="card-body"> 
-								<p>A web app created with Vue.js and Python to mathematically predict the chances of the user having COVID-19.</p>
+								<p>A web app created with Vue.js and Python to mathematically predict the threat level posed to the user by COVID-19.</p>
+								<p>Uses a variety of different factors to calculate risks, including pre-existing conditions, current symptoms, and the statistics from the users
+									current geographical location within Canada.
+								</p>
 								<ul>
-									<li>I successfully created and implemented the algorithm for determining </li>
+									<li>I successfully designed and implemented the algorithm to determine the likelihood that the user's current symptoms are caused by COVID-19.</li>
+									<li>Collaboratively created the user interface, ensuring it is easy and straightforward to use.</li>
 								</ul>
-
+								<br>
 								<i class="date">Created for Biomedical Computing (CMPT 340) - April 2020</i>
 							</div>
 						</div>
@@ -174,34 +187,34 @@
 							</div>
 							<div class="card-body"> 
 								<p>An android app that allow users to see the latest health inspections at any restaurant in Surrey, BC.</p>
-								<p>As a member of my team, my roles included:</p>
+								<p>As part of my team, I...</p>
 								<ul>
-									<li></li>
+									<li>Implemented multiple classes for handling data and displaying it in a user-friendly format.</li>
+									<li>Created the ability for users to favourite restaurants so they can find them from the list quickly.</li>
 								</ul>
 
 
 								<div id="project-img" class="row">
 									<div class="card project-img">
-										<img class="card-img-top" src="src/me.jpg">
-										<div class="card-footer">
-											The welcome screen
+										<img class="card-img-top" src="src/map.png">
+										<div class="card-footer h-100">
+											<b>Map Screen</b> - <i>A scrollable and pannable map that lets the user visually select their favourite restaurants</i>
 										</div>
 									</div>
 									<div class="card project-img">
-										<img class="card-img-top" src="src/me.jpg">
-										<div class="card-footer">
-											The welcome screen
+										<img class="card-img-top" src="src/restaurant_info.png">
+										<div class="card-footer h-100">
+											<b>Restaurant Info Screen</b> - <i>User can tap on an inspection from the list to open the inspection info screen</i>
 										</div>
 									</div>
 									<div class="card project-img">
-										<img class="card-img-top" src="src/me.jpg">
-										<div class="card-footer">
-											The welcome screen
+										<img class="card-img-top" src="src/specific_inspection_details.png">
+										<div class="card-footer h-100">
+											<b>Inspection Info Screen</b> - <i>Shows hazard level and individual health code violations for each health inspection</i>
 										</div>
 									</div>
 								</div>
-								
-
+								<br>
 								<i class="date project-footer">Created for Introduction to Software Engineering (CMPT 276) - February 2020</i>
 							</div>
 						</div>
