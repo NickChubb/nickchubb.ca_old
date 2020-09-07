@@ -1,5 +1,6 @@
 body{
   background: url('../src/grainy_background.png'), rgb(50,50,50);
+  font-family: 'Montserrat', sans-serif;
 }
 
 article{
