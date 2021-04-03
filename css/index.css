@@ -145,11 +145,18 @@ p {
   font-size: 24;
 }
 
-.project-img {
+.eatsafe-img {
   margin-top: 15px;
   margin-bottom: 25px;
   margin-left: 15px;
   width: 18rem;
+}
+
+.project-img {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  width: 38rem;
 }
 
 .project-card{
